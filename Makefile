@@ -1,4 +1,8 @@
 PORT ?= 8000
+WEB_CONCURRENCY ?= 4
+
+install:
+	poetry install
 
 dev:
 	poetry run python manage.py runserver
