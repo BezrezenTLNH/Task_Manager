@@ -36,11 +36,13 @@ ALLOWED_HOSTS = [
     'webserver',
 ]
 
+EXTERNAL_HOSTNAME = os.getenv('EXTERNAL_HOSTNAME')
+if EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(EXTERNAL_HOSTNAME)
 
 # Application definition
 
 INSTALLED_APPS = [
-    'users.apps.RenderConfig'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,7 +51,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
     'task_manager',
-    'task_manager.users',
 ]
 
 MIDDLEWARE = [
