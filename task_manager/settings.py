@@ -43,6 +43,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -123,7 +124,11 @@ LANGUAGES = [
     ('ru', 'Russian')
 ]
 
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+
 LANGUAGE_CODE = 'en'
+
+MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'en'
 
 LOCALE_PATHS = [
     BASE_DIR / 'task_manager' / 'locale',
