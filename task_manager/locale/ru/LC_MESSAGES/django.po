@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-03 21:21+0100\n"
+"POT-Creation-Date: 2023-12-03 21:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,30 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-
-#: settings.py:124
-msgid "English"
-msgstr ""
-
-#: settings.py:125
-msgid "Russian"
-msgstr ""
-
-#: templates/header.html:23 templates/header.html:29
-#, fuzzy
-#| msgid "Task Manager"
+#: templates/header.html:21 templates/header.html:27
 msgid "Task manager"
 msgstr "Менеджер задач"
 
-#: templates/header.html:36
+#: templates/header.html:34
 msgid "Users"
 msgstr "Пользователи"
 
-#: templates/header.html:43
+#: templates/header.html:41
 msgid "Sign in"
 msgstr "Вход"
 
-#: templates/header.html:46
+#: templates/header.html:44
 msgid "Registration"
 msgstr "Регистрация"
 
@@ -55,7 +44,5 @@ msgid "Practical programming courses"
 msgstr "Практические курсы по программированию"
 
 #: templates/index.html:21
-#, fuzzy
-#| msgid "Learn More"
 msgid "Learn more"
 msgstr "Узнать больше"

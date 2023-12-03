@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 from distutils.util import strtobool
 from dotenv import load_dotenv
+from django.utils.translation import gettext_lazy as _
 import dj_database_url
 import os
 
@@ -120,15 +121,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGES = [
-    ('en', 'English'),
-    ('ru', 'Russian')
+    ('en-us', _('English')),
+    ('ru-ru', _('Russian'))
 ]
 
-MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
-
 LANGUAGE_CODE = 'en'
-
-MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'en'
 
 LOCALE_PATHS = [
     BASE_DIR / 'task_manager' / 'locale',
