@@ -1,10 +1,10 @@
 from django.conf.urls.i18n import i18n_patterns
 from django.urls import path, include
-from task_manager import views
+from task_manager.users import views
 
 
 urlpatterns = [
-    path('/', views.index),
+    path('', views.index, name='index'),
 ]
 
 # urlpatterns += i18n_patterns(

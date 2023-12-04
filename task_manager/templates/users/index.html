@@ -1,0 +1,25 @@
+{% load i18n %}
+
+{% include 'header.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <div class="container wrapper flex-grow-1">
+      <h1 class="my-4"> {% translate 'Users' %}</h1>
+    </div>
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Имя пользователя</th>
+      <th>Полное имя</th>
+      <th>Дата создания</th>
+      <th></th>
+    </tr>
+  </thead>
+{% include 'footer.html' %}
+</body>
+</html>
