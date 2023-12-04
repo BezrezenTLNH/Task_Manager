@@ -91,10 +91,13 @@ WSGI_APPLICATION = 'task_manager.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=os.getenv(
+            'DATABASE_URL',
+            'sqlite:///db.sqlite3'
+        ),
+        conn_max_age=600
+    )
 }
 
 
@@ -125,17 +128,17 @@ LANGUAGES = [
     ('ru-ru', _('Russian'))
 ]
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'ru-ru'
 
-LOCALE_PATHS = [
-    BASE_DIR / 'task_manager' / 'locale',
-]
+# LOCALE_PATHS = [
+#     BASE_DIR / 'task_manager' / 'locale',
+# ]
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+# USE_TZ = True
 
 
 
