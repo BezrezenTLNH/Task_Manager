@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-04 13:22+0100\n"
+"POT-Creation-Date: 2023-12-04 22:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,3 +55,17 @@ msgstr "Практические курсы по программировани�
 #: templates/index.html:19
 msgid "Learn more"
 msgstr "Узнать больше"
+
+#: templates/users/index.html:17
+#, fuzzy
+#| msgid "Users"
+msgid "Username"
+msgstr "Пользователи"
+
+#: templates/users/index.html:18
+msgid "Full name"
+msgstr "Полное имя"
+
+#: templates/users/index.html:19
+msgid "Creation date"
+msgstr "Дата создания"
