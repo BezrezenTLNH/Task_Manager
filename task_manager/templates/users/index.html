@@ -9,17 +9,35 @@
 <body class="d-flex flex-column min-vh-100">
     <div class="container wrapper flex-grow-1">
       <h1 class="my-4"> {% translate 'Users' %}</h1>
+        <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>{% translate 'Username' %}</th>
+                  <th>{% translate 'Full name' %}</th>
+                  <th>{% translate 'Creation date' %}</th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              {% for user in users %}
+                <tbody>
+                  <tr>
+                    <td class="fw-bold text-light">{{ user.id }}</td>
+                    <td class="fw-bold text-light">{{ user.username }}</td>
+                    <td class="fw-bold text-light">{{ user.get_full_name }}</td>
+                    <td class="fw-bold text-light">{{ user.date_joined }}</td>
+                    <td class="fw-bold text-light">
+                      <a class="" href="{% url 'update_user' user.id %}">{% translate 'Update' %}</a>
+                      <br>
+                      <a class="" href="{% url 'delete_user' user.id %}">{% translate 'Delete' %}</a>
+                    </td>
+                  </tr>
+                </tbody>
+              {% endfor %}
+           </table>
     </div>
-    <table class="table table-striped">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>{% translate 'Username' %}</th>
-      <th>{% translate 'Full name' %}</th>
-      <th>{% translate 'Creation date' %}</th>
-      <th></th>
-    </tr>
-  </thead>
+
 {% include 'footer.html' %}
 </body>
 </html>

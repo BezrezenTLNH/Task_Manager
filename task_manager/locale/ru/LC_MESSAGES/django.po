@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-04 22:13+0100\n"
+"POT-Creation-Date: 2023-12-04 22:27+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,3 +69,11 @@ msgstr "Полное имя"
 #: templates/users/index.html:19
 msgid "Creation date"
 msgstr "Дата создания"
+
+#: templates/users/index.html:31
+msgid "Update"
+msgstr "Изменить"
+
+#: templates/users/index.html:33
+msgid "Delete"
+msgstr "Удалить"
