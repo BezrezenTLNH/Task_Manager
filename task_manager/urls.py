@@ -24,7 +24,8 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    path("i18n/", include("django.conf.urls.i18n")),
+    path("i18n/", include('django.conf.urls.i18n')),
+    path('users/', include('task_manager.users.urls')),
     path('', views.index),
     prefix_default_language=False
 )
