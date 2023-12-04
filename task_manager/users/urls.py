@@ -4,11 +4,5 @@ from task_manager.users import views
 
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.UsersView.as_view(), name='users'),
 ]
-
-# urlpatterns += i18n_patterns(
-#     path("i18n/", include("django.conf.urls.i18n")),
-#     path('', views.index),
-#     prefix_default_language=False
-# )

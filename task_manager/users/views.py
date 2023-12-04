@@ -6,14 +6,8 @@ from django.contrib.auth.models import User
 
 
 # Create your views here.
-def index(request):
-    return render(request, 'users/index.html')
-
-class IndexUsersView(ListView):
+class UsersView(ListView):
 
     template_name = 'users/users.html'
     model = User
     context_object_name = 'users'
-
-# @require_http_methods(['GET', 'POST'])
-# def get(request):
