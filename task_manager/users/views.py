@@ -17,6 +17,7 @@ class UsersView(ListView):
 class UserFormCreateView(CreateView):
     template_name = 'users/create.html'
     form_class = CustomUserCreationForm
+    success_url = reverse_lazy('users')
 
 class UserFormChangeView(UpdateView):
     template_name = 'users/update.html'
