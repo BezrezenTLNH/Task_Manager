@@ -9,3 +9,6 @@ dev:
 
 start:
 	poetry run gunicorn -w $(WEB_CONCURRENCY) -b 0.0.0.0:$(PORT) task_manager.wsgi:application
+
+shell:
+	django-admin shell

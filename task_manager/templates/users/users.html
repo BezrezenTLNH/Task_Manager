@@ -9,25 +9,25 @@
 <body class="d-flex flex-column min-vh-100">
     <div class="container wrapper flex-grow-1">
       <h1 class="my-4"> {% translate 'Users' %}</h1>
-        <table class="table table-striped">
+        <table class="table table-striped table-active table-hover">
               <thead>
                 <tr>
-                  <th>ID</th>
-                  <th>{% translate 'Username' %}</th>
-                  <th>{% translate 'Full name' %}</th>
-                  <th>{% translate 'Creation date' %}</th>
-                  <th></th>
+                  <th class="fw-bold text-dark">ID</th>
+                  <th class="fw-bold text-dark">{% translate 'Username' %}</th>
+                  <th class="fw-bold text-dark">{% translate 'Full name' %}</th>
+                  <th class="fw-bold text-dark">{% translate 'Creation date' %}</th>
+                  <th class="fw-bold text-dark"></th>
                 </tr>
               </thead>
 
               {% for user in users %}
                 <tbody>
                   <tr>
-                    <td class="fw-bold text-light">{{ user.id }}</td>
-                    <td class="fw-bold text-light">{{ user.username }}</td>
-                    <td class="fw-bold text-light">{{ user.get_full_name }}</td>
-                    <td class="fw-bold text-light">{{ user.date_joined }}</td>
-                    <td class="fw-bold text-light">
+                    <td class="fw-bold text-dark">{{ user.id }}</td>
+                    <td class="fw-bold text-dark">{{ user.username }}</td>
+                    <td class="fw-bold text-dark">{{ user.get_full_name }}</td>
+                    <td class="fw-bold text-dark">{{ user.date_joined }}</td>
+                    <td class="fw-bold text-dark">
                       <a class="" href="{% url 'update_user' user.id %}">{% translate 'Update' %}</a>
                       <br>
                       <a class="" href="{% url 'delete_user' user.id %}">{% translate 'Delete' %}</a>
