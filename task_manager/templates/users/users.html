@@ -3,6 +3,15 @@
 {% include 'header.html' %}
 <html lang="en">
 <body class="d-flex flex-column min-vh-100">
+{% if form.errors %}
+<div>
+    <ul>
+    {% for error in form.errors %}
+        <li><strong>{{ error|escape }}</strong></li>
+    {% endfor %}
+    </ul>
+</div>
+{% endif %}
     <div class="container wrapper flex-grow-1">
       <h1 class="my-4"> {% translate 'Users' %}</h1>
         <table class="table table-striped">

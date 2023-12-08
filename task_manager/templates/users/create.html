@@ -8,7 +8,8 @@
         <div class="container wrapper flex-grow-1">
             <h1 class="my-4">{% translate 'Registration' %}</h1>
 <form method="post">
-  <input type="hidden" name="csrfmiddlewaretoken" value="lghXwZRvzdycJ4bHgKzFNCJEldEtB2pOeYTpMAn1dcFnSMa19Y0Ww5lPlfEmdpeP">
+  {% csrf_token %}
+<!--  <input type="hidden" name="csrfmiddlewaretoken" value="lghXwZRvzdycJ4bHgKzFNCJEldEtB2pOeYTpMAn1dcFnSMa19Y0Ww5lPlfEmdpeP">-->
   <div class="mb-3">
       <label class="form-label" for="id_first_name">{% translate 'Name' %}</label>
         <input type="text" name="first_name" maxlength="150" class="form-control" placeholder="{% translate 'Name' %}" required id="id_first_name">
