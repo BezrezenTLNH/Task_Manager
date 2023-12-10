@@ -4,10 +4,13 @@
 
 
 <html lang="en">
-<h1 class="my-4">{% translate 'Change user' %}</h1>
+    <body class="d-flex flex-column min-vh-100">
+        <div class="container wrapper flex-grow-1">
+            {% include 'messages.html' %}
+            <h1 class="my-4">{% translate 'Entrance' %}</h1>
 <form action="{% url 'update_user' pk=user.pk %}" method="post">
     {% csrf_token %}
-    <div class="mb-3">
+    <div class="mb-4">
         <label class="form-label" for="id_first_name">{% translate 'First name' %}</label>
         <input type="text" name="first_name" maxlength="150" class="form-control" placeholder="{% translate 'First name' %}" required="" id="id_first_name" value="{{ user.first_name }}">
     </div>
@@ -36,11 +39,11 @@
     </div>
     <input class="btn btn-primary" type="submit" value="{% translate 'Change' %}">
 </form>
-{% if form.errors%}
-    {% for error in form.errors %}
-        <p>{{ error|escape }}</p>
-    {% endfor %}
-{% endif %}
+    {% if form.errors%}
+        {% for error in form.errors %}
+            <p>{{ error|escape }}</p>
+        {% endfor %}
+    {% endif %}
 
 {% include 'footer.html' %}
 </html>

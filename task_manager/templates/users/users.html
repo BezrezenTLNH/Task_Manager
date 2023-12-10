@@ -2,11 +2,11 @@
 
 {% include 'header.html' %}
 
-{% include 'messages.html' %}
 
 <html lang="en">
 <body class="d-flex flex-column min-vh-100">
     <div class="container wrapper flex-grow-1">
+        {% include 'messages.html' %}
       <h1 class="my-4"> {% translate 'Users' %}</h1>
         <table class="table table-striped">
               <thead>
