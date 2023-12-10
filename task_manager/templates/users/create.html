@@ -6,10 +6,10 @@
 <html lang="en">
     <body class="d-flex flex-column min-vh-100">
         <div class="container wrapper flex-grow-1">
+            {% include 'messages.html' %}
             <h1 class="my-4">{% translate 'Registration' %}</h1>
 <form method="post">
   {% csrf_token %}
-<!--  <input type="hidden" name="csrfmiddlewaretoken" value="lghXwZRvzdycJ4bHgKzFNCJEldEtB2pOeYTpMAn1dcFnSMa19Y0Ww5lPlfEmdpeP">-->
   <div class="mb-3">
       <label class="form-label" for="id_first_name">{% translate 'Name' %}</label>
         <input type="text" name="first_name" maxlength="150" class="form-control" placeholder="{% translate 'Name' %}" required id="id_first_name">
@@ -27,9 +27,7 @@
         <label class="form-label" for="id_password1">{% translate 'Password' %}</label>
             <input type="password" name="password1" autocomplete="new-password" class="form-control" placeholder="{% translate 'Password' %}" required id="id_password1">
         <div class="form-text">
-            <ul>
-                <li>{% translate 'Your password must contain at least 3 characters.' %}</li>
-            </ul>
+            <div class="form-text">{% translate 'Your password must contain at least 8 characters.' %}</div>
         </div>
     </div>
     <div class="mb-3">

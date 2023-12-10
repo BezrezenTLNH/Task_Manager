@@ -13,7 +13,7 @@ class CustomUserCreationForm(UserCreationForm):
             'username',
         ]
 
-class CustomUserChangeForm(UserChangeForm):
+class CustomUserUpdateForm(UserChangeForm):
     class Meta:
         model = User
         fields = [

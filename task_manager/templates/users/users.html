@@ -1,38 +1,32 @@
 {% load i18n %}
 
 {% include 'header.html' %}
+
+{% include 'messages.html' %}
+
 <html lang="en">
 <body class="d-flex flex-column min-vh-100">
-{% if form.errors %}
-<div>
-    <ul>
-    {% for error in form.errors %}
-        <li><strong>{{ error|escape }}</strong></li>
-    {% endfor %}
-    </ul>
-</div>
-{% endif %}
     <div class="container wrapper flex-grow-1">
       <h1 class="my-4"> {% translate 'Users' %}</h1>
         <table class="table table-striped">
               <thead>
                 <tr>
-                  <th class="fw-bold text-dark">ID</th>
-                  <th class="fw-bold text-dark">{% translate 'Username' %}</th>
-                  <th class="fw-bold text-dark">{% translate 'Full name' %}</th>
-                  <th class="fw-bold text-dark">{% translate 'Creation date' %}</th>
-                  <th class="fw-bold text-dark"></th>
+                  <th class="text-dark">ID</th>
+                  <th class="text-dark">{% translate 'Username' %}</th>
+                  <th class="text-dark">{% translate 'Full name' %}</th>
+                  <th class="text-dark">{% translate 'Creation date' %}</th>
+                  <th class="text-dark"></th>
                 </tr>
               </thead>
 
               {% for user in users %}
                 <tbody>
                   <tr>
-                    <td class="fw-bold text-dark">{{ user.id }}</td>
-                    <td class="fw-bold text-dark">{{ user.username }}</td>
-                    <td class="fw-bold text-dark">{{ user.get_full_name }}</td>
-                    <td class="fw-bold text-dark">{{ user.date_joined }}</td>
-                    <td class="fw-bold text-dark">
+                    <td class="text-dark">{{ user.id }}</td>
+                    <td class="text-dark">{{ user.username }}</td>
+                    <td class="text-dark">{{ user.get_full_name }}</td>
+                    <td class="text-dark">{{ user.date_joined }}</td>
+                    <td class="text-dark">
                       <a class="" href="{% url 'update_user' user.id %}">{% translate 'Update' %}</a>
                       <br>
                       <a class="" href="{% url 'delete_user' user.id %}">{% translate 'Delete' %}</a>
