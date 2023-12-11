@@ -1,8 +1,3 @@
-from django.shortcuts import render, redirect
-from django.views.decorators.http import require_http_methods
-from django.contrib.auth import logout, login, authenticate
-from django.contrib.auth.forms import AuthenticationForm
-from django.views import View
 from django.contrib import messages
 from django.views.generic import CreateView, UpdateView, DeleteView, ListView
 from .forms import CustomUserCreationForm, CustomUserUpdateForm
@@ -20,6 +15,7 @@ class UsersView(ListView):
     model = User
     context_object_name = 'users'
 
+
 class UserFormCreateView(CreateView):
     template_name = 'users/create.html'
     form_class = CustomUserCreationForm
@@ -34,10 +30,9 @@ class UserFormCreateView(CreateView):
         messages.error(self.request, _("Please refill the form!"))
         return super().form_invalid(form)
 
-class UserFormUpdateView(
-    CustomLoginRequiredMixin,
-    CustomAccessMixin,
-    UpdateView):
+
+class UserFormUpdateView(CustomLoginRequiredMixin,
+                         CustomAccessMixin, UpdateView):
 
     model = User
     template_name = 'users/update.html'
@@ -49,11 +44,9 @@ class UserFormUpdateView(
         return super().form_valid(form)
 
 
-class UserFormDeleteView(
-    CustomLoginRequiredMixin,
-    CustomAccessMixin,
-    DeleteView):
-    
+class UserFormDeleteView(CustomLoginRequiredMixin,
+                         CustomAccessMixin, DeleteView):
+
     model = User
     template_name = 'users/delete.html'
     success_url = reverse_lazy('users')

@@ -1,4 +1,3 @@
-from django.conf.urls.i18n import i18n_patterns
 from django.urls import path, include
 from task_manager.users import views
 
@@ -7,8 +6,7 @@ urlpatterns = [
     path('', views.UsersView.as_view(), name='users'),
     path('create/', views.UserFormCreateView.as_view(), name='create_user'),
     path('<int:pk>/update/', views.UserFormUpdateView.as_view(),
-        name='update_user'),
+    name='update_user'),
     path('<int:pk>/delete/', views.UserFormDeleteView.as_view(),
-        name='delete_user'),
+    name='delete_user'),
 ]
-
