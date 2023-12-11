@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-10 22:18+0100\n"
+"POT-Creation-Date: 2023-12-11 21:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -124,6 +124,14 @@ msgstr "Для подтверждения введите, пожалуйста, 
 msgid "Registry"
 msgstr "Зарегистрировать"
 
+#: task_manager/templates/users/delete.html:10
+msgid "Deleting a user"
+msgstr "Удаление пользователя"
+
+#: task_manager/templates/users/delete.html:12
+msgid "Are you sure you want to delete the user"
+msgstr "Вы уверены, что хотите удалить пользователя"
+
 #: task_manager/templates/users/update.html:14
 #: task_manager/templates/users/update.html:15
 #, fuzzy
@@ -195,6 +203,12 @@ msgstr "Пожалуйста, заполните форму заново!"
 
 #: task_manager/users/views.py:48
 msgid "User successfully changed"
+msgstr "Пользователь успешно изменен"
+
+#: task_manager/users/views.py:62
+#, fuzzy
+#| msgid "User successfully changed"
+msgid "User deleted successfully"
 msgstr "Пользователь успешно изменен"
 
 #: task_manager/views.py:18
