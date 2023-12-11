@@ -49,32 +49,15 @@ class UserFormUpdateView(
         return super().form_valid(form)
 
 
-class UserFormDeleteView(DeleteView):
+class UserFormDeleteView(
+    CustomLoginRequiredMixin,
+    CustomAccessMixin,
+    DeleteView):
+    
     model = User
     template_name = 'users/delete.html'
     success_url = reverse_lazy('users')
 
-
-# class LoginUser(View):
-#
-#     def get(self, request, *args, **kwargs):
-#         form = AuthenticationForm
-#         return render(request, 'users/login.html', {'form': form})
-#
-#     def post(self, request, *args, **kwargs):
-#         form = AuthenticationForm(data=request.POST)
-#
-#         if form.is_valid():
-#             username = form.cleaned_data.get('username')
-#             password = form.cleaned_data.get('password')
-#             user = authenticate(username=username, password=password)
-#             login(request, user)
-#             messages.success(request, _('You are logged in'))
-#             return redirect('index')
-#
-#         return render(request, 'users/login.html', {'form': form})
-#
-#     def logout_user(self):
-#         logout(self)
-#         messages.success(self, _('You are logged out'))
-#         return redirect('/')
+    def form_valid(self, form):
+        messages.success(self.request, _('User deleted successfully'))
+        return super().form_valid(form)
