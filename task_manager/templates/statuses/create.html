@@ -1,0 +1,23 @@
+{% load i18n %}
+
+{% include 'header.html' %}
+
+
+<html lang="en">
+    <body class="d-flex flex-column min-vh-100">
+        <div class="container wrapper flex-grow-1">
+            {% include 'messages.html' %}
+            <h1 class="my-4">{% translate 'Create status' %}</h1>
+<form method="post">
+  {% csrf_token %}
+  <div class="mb-3">
+      <label class="form-label" for="id_name">{% translate 'Name' %}</label>
+      <input type="text" name="name" maxlength="100" class="form-control" placeholder="{% translate 'Name' %}" required id="id_name">
+  </div>
+    <input class="btn btn-primary" type="submit" value="{% translate 'Create status' %}">
+</form>
+        </div>
+    </body>
+
+{% include 'footer.html' %}
+</html>

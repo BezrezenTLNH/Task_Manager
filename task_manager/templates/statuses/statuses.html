@@ -1,0 +1,41 @@
+{% load i18n %}
+
+{% include 'header.html' %}
+
+
+<html lang="en">
+<body class="d-flex flex-column min-vh-100">
+    <div class="container wrapper flex-grow-1">
+        {% include 'messages.html' %}
+      <h1 class="my-4"> {% translate 'Statuses' %}</h1>
+        <a class="btn btn-primary mb-3" href="{% url 'create_status' %}">{% translate 'Create status' %}</a>
+        <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="text-dark">ID</th>
+                  <th class="text-dark">{% translate 'Name' %}</th>
+                  <th class="text-dark">{% translate 'Creation date' %}</th>
+                  <th class="text-dark"></th>
+                </tr>
+              </thead>
+
+              {% for status in statuses %}
+                <tbody>
+                  <tr>
+                    <td class="text-dark">{{ status.id }}</td>
+                    <td class="text-dark">{{ status.name }}</td>
+                    <td class="text-dark">{{ status.created_at }}</td>
+                    <td class="text-dark">
+                      <a class="" href="{% url 'update_status' status.id %}">{% translate 'Update' %}</a>
+                      <br>
+                      <a class="" href="{% url 'delete_status' status.id %}">{% translate 'Delete' %}</a>
+                    </td>
+                  </tr>
+                </tbody>
+              {% endfor %}
+           </table>
+    </div>
+
+{% include 'footer.html' %}
+</body>
+</html>

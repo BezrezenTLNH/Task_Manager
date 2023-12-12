@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.views.generic.base import TemplateView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import reverse_lazy
@@ -7,13 +7,13 @@ from django.utils.translation import gettext as _
 from django.contrib import messages
 
 
-def index(request):
-    return render(request, 'index.html')
+class MainIndexView(TemplateView):
+    template_name = "index.html"
 
 
 class LoginUserFormView(SuccessMessageMixin, LoginView):
     template_name = "login.html"
-    next_page = reverse_lazy("index")
+    next_page = reverse_lazy("main_index")
     form_class = AuthenticationForm
     success_message = _("You are logged in")
 
@@ -29,7 +29,7 @@ class LoginUserFormView(SuccessMessageMixin, LoginView):
 
 
 class LogoutUserView(SuccessMessageMixin, LogoutView):
-    next_page = reverse_lazy("index")
+    next_page = reverse_lazy("main_index")
 
     def dispatch(self, request, *args, **kwargs):
         messages.info(request, _("You are logged out"))

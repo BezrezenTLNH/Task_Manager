@@ -23,12 +23,14 @@ import task_manager.users.views as view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('task_manager.users.urls')),
+    path('statuses/', include('task_manager.statuses.urls')),
 ]
 
 urlpatterns += i18n_patterns(
     path('i18n/', include('django.conf.urls.i18n')),
-    path('', views.index),
+    path('', views.MainIndexView.as_view(), name='main_index'),
     path('users/', include('task_manager.users.urls')),
+    path('statuses/', include('task_manager.statuses.urls')),
     path("login/", views.LoginUserFormView.as_view(), name="login"),
     path("logout/", views.LogoutUserView.as_view(), name="logout"),
     prefix_default_language=False

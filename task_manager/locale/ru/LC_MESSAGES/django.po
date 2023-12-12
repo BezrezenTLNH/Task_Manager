@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-11 21:50+0100\n"
+"POT-Creation-Date: 2023-12-12 22:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,46 +19,75 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-
 #: task_manager/mixins.py:10
 msgid "You are not authorized! Please log in."
-msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
+msgstr "Вы не авторизованы! Пожалуйста залогинтесь"
 
-#: task_manager/settings.py:122
+#: task_manager/settings.py:123
 msgid "English"
 msgstr ""
 
-#: task_manager/settings.py:123
+#: task_manager/settings.py:124
 msgid "Russian"
 msgstr ""
 
-#: task_manager/templates/header.html:21 task_manager/templates/header.html:27
+#: task_manager/statuses/models.py:12
+msgid "Task status with such Name already exist."
+msgstr "Задача с таким именем уже существует"
+
+#: task_manager/statuses/models.py:14
+#: task_manager/templates/statuses/create.html:14
+#: task_manager/templates/statuses/create.html:15
+#: task_manager/templates/statuses/statuses.html:16
+#: task_manager/templates/users/create.html:14
+#: task_manager/templates/users/create.html:15
+msgid "Name"
+msgstr "Имя"
+
+#: task_manager/statuses/views.py:23
+msgid "Status successfully created"
+msgstr "Статус успешно создан"
+
+#: task_manager/statuses/views.py:35
+msgid "Status successfully changed"
+msgstr "Статус успешно изменён"
+
+#: task_manager/templates/header.html:21 task_manager/templates/header.html:28
 msgid "Task manager"
 msgstr "Менеджер задач"
 
-#: task_manager/templates/header.html:34
+#: task_manager/templates/header.html:35
 #: task_manager/templates/users/users.html:10
 msgid "Users"
 msgstr "Пользователи"
 
 #: task_manager/templates/header.html:41
-msgid "Sign in"
-msgstr "Вход"
+#: task_manager/templates/statuses/statuses.html:10
+msgid "Statuses"
+msgstr "Статусы"
 
 #: task_manager/templates/header.html:44
+msgid "Logout"
+msgstr "Выход"
+
+#: task_manager/templates/header.html:51
+msgid "Login"
+msgstr "Вход"
+
+#: task_manager/templates/header.html:54
 #: task_manager/templates/users/create.html:10
 msgid "Registration"
 msgstr "Регистрация"
 
-#: task_manager/templates/index.html:16
+#: task_manager/templates/index.html:13
 msgid "Hello from Hexlet!"
 msgstr "Привет от Хекслета!"
 
-#: task_manager/templates/index.html:17
+#: task_manager/templates/index.html:14
 msgid "Practical programming courses"
 msgstr "Практические курсы по программированию"
 
-#: task_manager/templates/index.html:19
+#: task_manager/templates/index.html:16
 msgid "Learn more"
 msgstr "Узнать больше"
 
@@ -74,7 +103,7 @@ msgstr "Вход"
 #: task_manager/templates/users/update.html:23
 #: task_manager/templates/users/users.html:15
 msgid "Username"
-msgstr "Имя пользователя"
+msgstr "Пользователь"
 
 #: task_manager/templates/login.html:25 task_manager/templates/login.html:26
 #: task_manager/templates/users/create.html:27
@@ -86,12 +115,28 @@ msgstr "Пароль"
 
 #: task_manager/templates/login.html:28
 msgid "Log in"
-msgstr "Войти"
+msgstr "Вход"
 
-#: task_manager/templates/users/create.html:14
-#: task_manager/templates/users/create.html:15
-msgid "Name"
-msgstr "Имя"
+#: task_manager/templates/statuses/create.html:10
+#: task_manager/templates/statuses/create.html:17
+#: task_manager/templates/statuses/statuses.html:11
+msgid "Create status"
+msgstr "Создать статус"
+
+#: task_manager/templates/statuses/statuses.html:17
+#: task_manager/templates/users/users.html:17
+msgid "Creation date"
+msgstr "Дата создания"
+
+#: task_manager/templates/statuses/statuses.html:29
+#: task_manager/templates/users/users.html:30
+msgid "Update"
+msgstr "Изменить"
+
+#: task_manager/templates/statuses/statuses.html:31
+#: task_manager/templates/users/users.html:32
+msgid "Delete"
+msgstr "Удалить"
 
 #: task_manager/templates/users/create.html:18
 #: task_manager/templates/users/create.html:19
@@ -102,16 +147,12 @@ msgstr "Фамилия"
 msgid ""
 "Obligatory field. No more than 150 characters. Only letters, numbers and "
 "symbols  @/./+/-/_."
-msgstr ""
-"Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./"
-"+/-/_."
+msgstr "Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./+/-/_."
 
 #: task_manager/templates/users/create.html:30
 #: task_manager/templates/users/update.html:31
-#, fuzzy
-#| msgid "Your password must contain at least 8 characters."
 msgid "Your password must contain at least 3 characters."
-msgstr "Ваш пароль должен содержать как минимум 3 символa."
+msgstr "Ваш пароль должен содержать как минимум 3 символа."
 
 #: task_manager/templates/users/create.html:34
 #: task_manager/templates/users/create.html:35
@@ -129,18 +170,16 @@ msgstr "Зарегистрировать"
 
 #: task_manager/templates/users/delete.html:10
 msgid "Deleting a user"
-msgstr "Удаление пользователя"
+msgstr "Удалить"
 
 #: task_manager/templates/users/delete.html:12
 msgid "Are you sure you want to delete the user"
-msgstr "Вы уверены, что хотите удалить пользователя"
+msgstr "Вы уверены, что хотите удлалить пользователя?"
 
 #: task_manager/templates/users/update.html:14
 #: task_manager/templates/users/update.html:15
-#, fuzzy
-#| msgid "Full name"
 msgid "First name"
-msgstr "Полное имя"
+msgstr "Имя"
 
 #: task_manager/templates/users/update.html:18
 #: task_manager/templates/users/update.html:19
@@ -148,21 +187,13 @@ msgid "Last name"
 msgstr "Фамилия"
 
 #: task_manager/templates/users/update.html:24
-#, fuzzy
-#| msgid ""
-#| "Obligatory field. No more than 150 characters. Only letters, numbers and "
-#| "symbols  @/./+/-/_."
 msgid ""
 "Obligatory field. No more than 150 characters. Only letters, numbers and "
 "symbols @/./+/-/_."
-msgstr ""
-"Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./"
-"+/-/_."
+msgstr "Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./+/-/_."
 
 #: task_manager/templates/users/update.html:36
 #: task_manager/templates/users/update.html:37
-#, fuzzy
-#| msgid "Password confirm"
 msgid "Password confirmation"
 msgstr "Подтверждение пароля"
 
@@ -174,39 +205,25 @@ msgstr "Изменить"
 msgid "Full name"
 msgstr "Полное имя"
 
-#: task_manager/templates/users/users.html:17
-msgid "Creation date"
-msgstr "Дата создания"
-
-#: task_manager/templates/users/users.html:30
-msgid "Update"
-msgstr "Изменить"
-
-#: task_manager/templates/users/users.html:32
-msgid "Delete"
-msgstr "Удалить"
-
 #: task_manager/users/mixins.py:13
 msgid "You don't have permission to change other user"
-msgstr "У вас нет прав для изменения другого пользователя."
+msgstr "У вас нет прав для изменения других пользователей"
 
 #: task_manager/users/views.py:26
 msgid "Your profile has been successfully created!"
-msgstr "Ваш профиль был успешно создан!"
+msgstr "Пользователь был успещно создан!"
 
 #: task_manager/users/views.py:30
 msgid "Please refill the form!"
-msgstr "Пожалуйста, заполните форму заново!"
+msgstr "Пожалуйста, заполните форму заного"
 
 #: task_manager/users/views.py:43
 msgid "User successfully changed"
-msgstr "Пользователь успешно изменен"
+msgstr "Пользователь успешно изменён"
 
 #: task_manager/users/views.py:55
-#, fuzzy
-#| msgid "User successfully changed"
 msgid "User deleted successfully"
-msgstr "Пользователь успешно изменен"
+msgstr "Пользователь успешно удалён"
 
 #: task_manager/views.py:18
 msgid "You are logged in"
@@ -216,9 +233,7 @@ msgstr "Вы залогинены"
 msgid ""
 "Please enter the correct username and password. Both fields can be case "
 "sensitive."
-msgstr ""
-"Пожалуйста, введите правильные имя пользователя и пароль. Оба поля могут "
-"быть чувствительны к регистру."
+msgstr "Пожалуйста, введите правильные имя пользователя и пароль. Оба поля могут быть чувствительны к регистру."
 
 #: task_manager/views.py:35
 msgid "You are logged out"
