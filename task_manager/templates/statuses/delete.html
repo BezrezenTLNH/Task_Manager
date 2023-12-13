@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load i18n %}
 
-</body>
+{% include 'header.html' %}
+
+
+<html lang="en">
+    <body class="d-flex flex-column min-vh-100">
+        <div class="container wrapper flex-grow-1">
+            {% include 'messages.html' %}
+            <h1 class="my-4">{% translate 'Deleting a status' %}</h1>
+
+            <p>{% translate 'Are you sure you want to delete the status' %} {{ object.name }}?</p>
+
+            <form action="{% url 'delete_status' object.id %}" method="post">
+              {% csrf_token %}
+              <input class="btn btn-danger" type="submit" value="{% translate 'Yes, delete' %}">
+            </form>
+        </div>
+    </body>
+
+{% include 'footer.html' %}
 </html>

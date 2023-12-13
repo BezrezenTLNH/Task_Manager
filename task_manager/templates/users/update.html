@@ -8,7 +8,7 @@
         <div class="container wrapper flex-grow-1">
             {% include 'messages.html' %}
             <h1 class="my-4">{% translate 'Entrance' %}</h1>
-<form action="{% url 'update_user' pk=user.pk %}" method="post">
+<form action="{% url 'update_user' object.id %}" method="post">
     {% csrf_token %}
     <div class="mb-4">
         <label class="form-label" for="id_first_name">{% translate 'First name' %}</label>
