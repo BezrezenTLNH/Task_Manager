@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load i18n %}
+{% load django_bootstrap5 %}
 
-</body>
+{% include 'header.html' %}
+
+
+<html lang="en">
+    <body class="d-flex flex-column min-vh-100">
+        <div class="container wrapper flex-grow-1">
+            {% include 'messages.html' %}
+            <h1 class="my-4">{% translate 'Update task' %}</h1>
+            <form action="{% url 'update_task' object.id %}" method="post">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <input class="btn btn-primary" type="submit" value="{% translate 'Update' %}">
+            </form>
+        </div>
+    </body>
+
+{% include 'footer.html' %}
 </html>
