@@ -1,18 +1,18 @@
 from django.contrib import messages
-from django.views.generic import CreateView, UpdateView, DeleteView, ListView
-from .forms import CustomUserCreationForm, CustomUserUpdateForm
-from django.utils.translation import gettext as _
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
+from django.utils.translation import gettext as _
+from django.views.generic import CreateView, UpdateView, DeleteView, ListView
+
 from task_manager.mixins import CustomLoginRequiredMixin
-from .mixins import CustomAccessMixin
 from task_manager.tasks.models import TaskModel
+from .forms import CustomUserCreationForm, CustomUserUpdateForm
+from .mixins import CustomAccessMixin
 
 
 # Create your views here.
 class UsersView(ListView):
-
     template_name = 'users/users.html'
     model = User
     context_object_name = 'users'
@@ -25,7 +25,8 @@ class UserFormCreateView(CreateView):
 
     def form_valid(self, form):
         form.save()
-        messages.success(self.request, _("Your profile has been successfully created!"))
+        messages.success(self.request,
+                         _("Your profile has been successfully created!"))
         return super().form_valid(form)
 
     def form_invalid(self, form):
@@ -35,7 +36,6 @@ class UserFormCreateView(CreateView):
 
 class UserFormUpdateView(CustomLoginRequiredMixin,
                          CustomAccessMixin, UpdateView):
-
     model = User
     template_name = 'users/update.html'
     form_class = CustomUserUpdateForm
@@ -48,7 +48,6 @@ class UserFormUpdateView(CustomLoginRequiredMixin,
 
 class UserFormDeleteView(CustomLoginRequiredMixin,
                          CustomAccessMixin, DeleteView):
-
     model = User
     template_name = 'users/delete.html'
     success_url = reverse_lazy('users')

@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('labels', '0001_initial'),
         ('tasks', '0001_initial'),
@@ -14,6 +13,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='taskmodel',
             name='labels',
-            field=models.ManyToManyField(blank=True, help_text='Select one or more tags.', to='labels.labelmodel', verbose_name='Labels'),
+            field=models.ManyToManyField(blank=True, help_text='Select one or more tags.', to='labels.labelmodel',
+                                         verbose_name='Labels'),
         ),
     ]

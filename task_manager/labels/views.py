@@ -24,6 +24,7 @@ class CreateLabel(CustomLoginRequiredMixin, CreateView):
         )
         return super().form_valid(form)
 
+
 class UpdateLabel(CustomLoginRequiredMixin, UpdateView):
     model = LabelModel
     form_class = LabelModelForm

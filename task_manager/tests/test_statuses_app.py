@@ -1,7 +1,11 @@
 from django.test import TestCase
 from task_manager.statuses.models import StatusModel
+from django import test
 
 
+@test.modify_settings(MIDDLEWARE={'remove': [
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
+]})
 class TestLabel(TestCase):
     def setUp(self):
         self.obj = StatusModel.objects.create(name="Test Status")
@@ -27,5 +31,5 @@ class TestLabel(TestCase):
     def test_delete_status(self):
         self.obj.delete()
 
-        with self.assertRaises(StatusModelDoesNotExist):
+        with self.assertRaises(StatusModel.DoesNotExist):
             StatusModel.objects.get(id=self.obj.id)

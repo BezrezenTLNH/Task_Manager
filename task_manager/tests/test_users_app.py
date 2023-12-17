@@ -1,8 +1,12 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.auth import get_user_model
+from django import test
 
 
+@test.modify_settings(MIDDLEWARE={'remove': [
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
+]})
 class TestRegistrationView(TestCase):
     def setUp(self):
         self.client = Client()
@@ -25,6 +29,9 @@ class TestRegistrationView(TestCase):
         self.assertEqual(response.status_code, 200)
 
 
+@test.modify_settings(MIDDLEWARE={'remove': [
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
+]})
 class TestLoginView(TestCase):
     def setUp(self):
         self.client = Client()
@@ -53,6 +60,9 @@ class TestLoginView(TestCase):
         self.assertEqual(response["Location"], "/")
 
 
+@test.modify_settings(MIDDLEWARE={'remove': [
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
+]})
 class TestLogoutView(TestCase):
     def setUp(self) -> None:
         self.client = Client()
@@ -68,6 +78,9 @@ class TestLogoutView(TestCase):
         self.assertEqual(response["Location"], "/")
 
 
+@test.modify_settings(MIDDLEWARE={'remove': [
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
+]})
 class TestUpdateView(TestCase):
     def setUp(self) -> None:
         self.client = Client()
@@ -120,6 +133,9 @@ class TestUpdateView(TestCase):
         self.assertEqual("Test", updated_user.first_name)
 
 
+@test.modify_settings(MIDDLEWARE={'remove': [
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
+]})
 class TestDeleteUserView(TestCase):
     def setUp(self) -> None:
         self.client = Client()
@@ -156,6 +172,9 @@ class TestDeleteUserView(TestCase):
         self.assertNotIn(user_pk, users_pk)
 
 
+@test.modify_settings(MIDDLEWARE={'remove': [
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
+]})
 class TestUsersViews(TestCase):
     def test_main_index_view(self):
         response = self.client.get("/")

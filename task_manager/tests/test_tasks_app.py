@@ -2,8 +2,12 @@ from django.test import TestCase
 from task_manager.tasks.models import TaskModel
 from task_manager.statuses.models import StatusModel
 from task_manager.users.models import Person
+from django import test
 
 
+@test.modify_settings(MIDDLEWARE={'remove': [
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
+]})
 class TestTask(TestCase):
     def setUp(self):
         self.user = Person.objects.create(

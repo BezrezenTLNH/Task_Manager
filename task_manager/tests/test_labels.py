@@ -1,7 +1,11 @@
 from django.test import TestCase
+from django import test
 from task_manager.labels.models import LabelModel
 
 
+@test.modify_settings(MIDDLEWARE={'remove': [
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
+]})
 class TestLabel(TestCase):
     def setUp(self):
         self.obj = LabelModel.objects.create(name="Test Label")

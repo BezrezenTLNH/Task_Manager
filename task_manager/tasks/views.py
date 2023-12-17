@@ -1,15 +1,15 @@
-from django.views import generic
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
+from django.views import generic
 
-from task_manager.statuses.models import StatusModel
 from task_manager.mixins import CustomLoginRequiredMixin
-from .models import TaskModel
+from task_manager.statuses.models import StatusModel
+from .filters import TaskFilter
 from .forms import TaskModelForm
 from .mixins import CustomAccessMixin
-from .filters import TaskFilter
+from .models import TaskModel
 
 
 class SpecificTaskView(generic.DetailView):
@@ -19,7 +19,6 @@ class SpecificTaskView(generic.DetailView):
 
 
 class TasksView(CustomLoginRequiredMixin, generic.ListView):
-
     template_name = 'tasks/tasks.html'
     model = TaskModel
     context_object_name = 'tasks'
@@ -40,7 +39,6 @@ class TasksView(CustomLoginRequiredMixin, generic.ListView):
 
 
 class CreateTaskView(CustomLoginRequiredMixin, generic.CreateView):
-
     template_name = 'tasks/create.html'
     form_class = TaskModelForm
 
@@ -53,7 +51,6 @@ class CreateTaskView(CustomLoginRequiredMixin, generic.CreateView):
 
 
 class UpdateTaskView(CustomLoginRequiredMixin, generic.UpdateView):
-
     model = TaskModel
     template_name = 'tasks/update.html'
     form_class = TaskModelForm
@@ -64,7 +61,6 @@ class UpdateTaskView(CustomLoginRequiredMixin, generic.UpdateView):
 
 
 class DeleteTaskView(CustomAccessMixin, generic.DeleteView):
-
     model = TaskModel
     template_name = 'tasks/delete.html'
     success_url = reverse_lazy('tasks')
@@ -72,4 +68,3 @@ class DeleteTaskView(CustomAccessMixin, generic.DeleteView):
     def form_valid(self, form):
         messages.success(self.request, _('Task deleted successfully!'))
         return super().form_valid(form)
-
