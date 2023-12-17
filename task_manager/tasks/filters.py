@@ -4,6 +4,7 @@ from django import forms
 
 from .models import TaskModel
 from task_manager.statuses.models import StatusModel
+from task_manager.labels.models import LabelModel
 from task_manager.users.models import Person
 
 
@@ -16,7 +17,10 @@ class TaskFilter(django_filters.FilterSet):
         label=_('Executor'),
         queryset=Person.objects.all()
     )
-
+    labels = django_filters.ModelChoiceFilter(
+        label=_('Label'),
+        queryset=LabelModel.objects.all()
+    )
     author = django_filters.BooleanFilter(
         label=_('Only my tasks'),
         method='filter_author',

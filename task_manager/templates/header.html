@@ -8,7 +8,9 @@
         {% get_available_languages as LANGUAGES %}
         {% get_language_info_list for LANGUAGES as languages %}
         {% for language in languages %}
-            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+            <option value="{{ language.code }}"
+                    {% if language.code == LANGUAGE_CODE %} selected
+                    {% endif %}>
                 {{ language.name_local }} ({{ language.code }})
             </option>
         {% endfor %}
@@ -41,20 +43,23 @@
                      <a class="nav-link" href="{% url 'statuses' %}">{% translate 'Statuses' %}</a>
                  </li>
                  <li class="nav-item">
-                     <a href="{% url 'logout' %}" class="nav-link">{% translate "Logout" %}</a>
+                     <a class="nav-link" href="{% url 'labels' %}">{% translate 'Labels' %}</a>
                  </li>
                  <li class="nav-item">
                      <a class="nav-link" href="{% url 'tasks' %}">{% translate 'Tasks' %}</a>
+                 </li>
+                 <li class="nav-item">
+                     <a href="{% url 'logout' %}" class="nav-link">{% translate 'Logout' %}</a>
                  </li>
                  {% endif %}
              </ul>
                  {% if not user.is_authenticated %}
              <ul class="navbar-nav mr-auto">
                  <li class="nav-item">
-                     <a href="{% url 'login' %}" class="nav-link">{% translate "Login" %}</a>
+                     <a href="{% url 'login' %}" class="nav-link">{% translate 'Login' %}</a>
                  </li>
                  <li class="nav-item">
-                     <a href="{% url 'create_user' %}" class="nav-link">{% translate "Registration" %}</a>
+                     <a href="{% url 'create_user' %}" class="nav-link">{% translate 'Registration' %}</a>
                  </li>
                  {% endif %}
              </ul>
