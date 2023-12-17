@@ -20,6 +20,7 @@ flake8 = "^6.1.0"
 django-modeltranslation = "^0.18.11"
 psycopg2-binary = "^2.9.9"
 django-filter = "^23.5"
+rollbar = "^1.0.0"
 
 
 [build-system]
