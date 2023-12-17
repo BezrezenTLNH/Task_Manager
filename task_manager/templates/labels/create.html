@@ -1,0 +1,21 @@
+{% load django_bootstrap5 i18n %}
+{% load i18n %}
+
+{% include 'header.html' %}
+
+
+<html lang="en">
+    <body class="d-flex flex-column min-vh-100">
+        <div class="container wrapper flex-grow-1">
+            {% include 'messages.html' %}
+        <h1 class="my-4">{% translate "Create label" %}</h1>
+        <form action="{% url 'create_label' %}" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input class="btn btn-primary" type="submit" value="{% translate 'Create' %}">
+        </form>
+        </div>
+    </body>
+
+{% include 'footer.html' %}
+</html>
