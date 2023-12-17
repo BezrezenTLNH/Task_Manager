@@ -8,7 +8,7 @@
     <body class="d-flex flex-column min-vh-100">
         <div class="container wrapper flex-grow-1">
             {% include 'messages.html' %}
-        <h1 class="my-4">{% translate "Create task" %}</h1>
+        <h1 class="my-4">{% translate 'Create task' %}</h1>
         <form action="{% url 'create_task' %}" method="post">
             {% csrf_token %}
             {% bootstrap_form form %}

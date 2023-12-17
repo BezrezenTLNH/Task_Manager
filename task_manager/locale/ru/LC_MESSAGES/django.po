@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-17 17:28+0100\n"
+"POT-Creation-Date: 2023-12-17 17:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,10 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-
 #: task_manager/labels/models.py:12 task_manager/statuses/models.py:12
 msgid "Task status with such Name already exist."
-msgstr "Задача с таким именем уже существует"
+msgstr "Статус задачи с таким именем уже существует"
 
 #: task_manager/labels/models.py:14 task_manager/statuses/models.py:14
 #: task_manager/tasks/models.py:18 task_manager/templates/labels/labels.html:17
@@ -40,20 +39,16 @@ msgid "Name"
 msgstr "Имя"
 
 #: task_manager/labels/views.py:23
-#, fuzzy
-#| msgid "Status successfully created"
 msgid "Label successfully created"
-msgstr "Статус успешно создан"
+msgstr "Метка успешно создана"
 
 #: task_manager/labels/views.py:34
-#, fuzzy
-#| msgid "Status successfully changed"
 msgid "Label successfully changed"
-msgstr "Статус успешно изменён"
+msgstr "Метка успешно изменена"
 
 #: task_manager/mixins.py:13 task_manager/tasks/mixins.py:15
 msgid "You are not authorized! Please log in."
-msgstr "Вы не авторизованы! Пожалуйста залогинтесь"
+msgstr "Вы не авторизованы. Пожалуйста, авторизуйтесь"
 
 #: task_manager/settings.py:127
 msgid "English"
@@ -74,7 +69,6 @@ msgstr "Статус успешно изменён"
 #: task_manager/tasks/filters.py:13 task_manager/tasks/models.py:31
 #: task_manager/templates/tasks/tasks.html:26
 #: task_manager/templates/tasks/view_task.html:28
-#, fuzzy
 msgid "Status"
 msgstr "Статус"
 
@@ -85,9 +79,8 @@ msgid "Executor"
 msgstr "Исполнитель"
 
 #: task_manager/tasks/filters.py:21
-#, fuzzy
 msgid "Label"
-msgstr "Метки"
+msgstr "Метка"
 
 #: task_manager/tasks/filters.py:25
 msgid "Only my tasks"
@@ -95,11 +88,9 @@ msgstr "Только мои задачи"
 
 #: task_manager/tasks/mixins.py:25
 msgid "Only its author can delete a task"
-msgstr "Задачу может удалить только ее автор"
+msgstr "Задачу может удалить только её автор"
 
 #: task_manager/tasks/models.py:16
-#, fuzzy
-#| msgid "Task status with such Name already exist."
 msgid "Task with such Name already exist."
 msgstr "Задача с таким именем уже существует"
 
@@ -108,10 +99,8 @@ msgid "Obligatory field."
 msgstr "Обязательное поле"
 
 #: task_manager/tasks/models.py:23
-#, fuzzy
-#| msgid "Registration"
 msgid "Description"
-msgstr "Регистрация"
+msgstr "Описание"
 
 #: task_manager/tasks/models.py:26
 msgid "Describe the task."
@@ -119,7 +108,7 @@ msgstr "Описание"
 
 #: task_manager/tasks/models.py:32
 msgid "Obligatory field. Select one of the task statuses."
-msgstr "Обязательное поле. Выберите один из статусов для задачи"
+msgstr "Обязательное поле. Выберите один из статусов"
 
 #: task_manager/tasks/models.py:41
 msgid "Select the task executor."
@@ -141,22 +130,16 @@ msgid "Select one or more tags."
 msgstr "Выбери одну или более меток"
 
 #: task_manager/tasks/views.py:50
-#, fuzzy
-#| msgid "Your profile has been successfully created!"
 msgid "Task has been successfully created"
-msgstr "Пользователь был успещно создан!"
+msgstr "Задача была успешно создана"
 
 #: task_manager/tasks/views.py:62
-#, fuzzy
-#| msgid "Status successfully changed"
 msgid "Task successfully changed"
-msgstr "Статус успешно изменён"
+msgstr "Задача успешно изменена"
 
 #: task_manager/tasks/views.py:73
-#, fuzzy
-#| msgid "User deleted successfully"
 msgid "Task deleted successfully!"
-msgstr "Пользователь успешно удалён"
+msgstr "Задача успешно удалена!"
 
 #: task_manager/templates/header.html:23 task_manager/templates/header.html:30
 msgid "Task manager"
@@ -204,29 +187,21 @@ msgstr "Узнать больше"
 
 #: task_manager/templates/labels/create.html:11
 #: task_manager/templates/labels/labels.html:12
-#, fuzzy
-#| msgid "Create status"
 msgid "Create label"
-msgstr "Создать статус"
+msgstr "Создать метку"
 
 #: task_manager/templates/labels/create.html:15
 #: task_manager/templates/tasks/create.html:15
-#, fuzzy
-#| msgid "Create status"
 msgid "Create"
-msgstr "Создать статус"
+msgstr "Создать"
 
 #: task_manager/templates/labels/delete.html:10
-#, fuzzy
-#| msgid "Delete"
 msgid "Delete label"
-msgstr "Удалить"
+msgstr "Удалить метку"
 
 #: task_manager/templates/labels/delete.html:11
-#, fuzzy
-#| msgid "Are you sure you want to delete the status"
 msgid "Are you sure you want to delete"
-msgstr "Вы уверены, что хотите удлалить пользователя?"
+msgstr "Вы уверены, что вы хотите удалить"
 
 #: task_manager/templates/labels/delete.html:14
 #: task_manager/templates/statuses/delete.html:16
@@ -242,7 +217,9 @@ msgid "Date of creation"
 msgstr "Дата создания"
 
 #: task_manager/templates/labels/labels.html:30
+#: task_manager/templates/labels/update.html:18
 #: task_manager/templates/statuses/statuses.html:29
+#: task_manager/templates/statuses/update.html:17
 #: task_manager/templates/tasks/update.html:15
 #: task_manager/templates/tasks/view_task.html:47
 #: task_manager/templates/users/users.html:30
@@ -258,13 +235,8 @@ msgid "Delete"
 msgstr "Удалить"
 
 #: task_manager/templates/labels/update.html:11
-msgid "Edit label"
-msgstr "Изменить метку"
-
-#: task_manager/templates/labels/update.html:18
-#: task_manager/templates/tasks/tasks.html:48
-msgid "Edit"
-msgstr "Изменить"
+msgid "Update label"
+msgstr "Обновить метку"
 
 #: task_manager/templates/login.html:16
 #: task_manager/templates/users/update.html:10
@@ -278,7 +250,7 @@ msgstr "Вход"
 #: task_manager/templates/users/update.html:23
 #: task_manager/templates/users/users.html:15
 msgid "Username"
-msgstr "Пользователь"
+msgstr "Имя пользователя"
 
 #: task_manager/templates/login.html:25 task_manager/templates/login.html:26
 #: task_manager/templates/users/create.html:27
@@ -290,7 +262,7 @@ msgstr "Пароль"
 
 #: task_manager/templates/login.html:28
 msgid "Log in"
-msgstr "Вход"
+msgstr "Войти"
 
 #: task_manager/templates/statuses/create.html:10
 #: task_manager/templates/statuses/create.html:17
@@ -300,11 +272,11 @@ msgstr "Создать статус"
 
 #: task_manager/templates/statuses/delete.html:10
 msgid "Deleting a status"
-msgstr "Удалить"
+msgstr "Удалить статус"
 
 #: task_manager/templates/statuses/delete.html:12
 msgid "Are you sure you want to delete the status"
-msgstr "Вы уверены, что хотите удлалить пользователя?"
+msgstr "Вы уверены, что хотите удалить статус"
 
 #: task_manager/templates/statuses/statuses.html:17
 #: task_manager/templates/users/users.html:17
@@ -312,38 +284,33 @@ msgid "Creation date"
 msgstr "Дата создания"
 
 #: task_manager/templates/statuses/update.html:10
-#: task_manager/templates/statuses/update.html:17
 msgid "Update status"
-msgstr "Создать статус"
+msgstr "Изменить статус"
 
 #: task_manager/templates/tasks/create.html:11
 #: task_manager/templates/tasks/tasks.html:12
-#, fuzzy
-#| msgid "Create status"
 msgid "Create task"
-msgstr "Создать статус"
+msgstr "Создать задачу"
 
 #: task_manager/templates/tasks/delete.html:10
-#, fuzzy
-#| msgid "Deleting a status"
 msgid "Deleting a task"
-msgstr "Удалить"
+msgstr "Удалить задачу"
 
 #: task_manager/templates/tasks/delete.html:12
-#, fuzzy
-#| msgid "Are you sure you want to delete the status"
 msgid "Are you sure you want to delete the task"
-msgstr "Вы уверены, что хотите удлалить пользователя?"
+msgstr "Вы уверены, что хотите удалить задачу"
 
 #: task_manager/templates/tasks/tasks.html:17
 msgid "Show"
 msgstr "Показать"
 
+#: task_manager/templates/tasks/tasks.html:48
+msgid "Edit"
+msgstr "Изменить"
+
 #: task_manager/templates/tasks/update.html:11
-#, fuzzy
-#| msgid "Update status"
 msgid "Update task"
-msgstr "Создать статус"
+msgstr "Изменить задачу"
 
 #: task_manager/templates/tasks/view_task.html:10
 msgid "View a task"
@@ -358,9 +325,7 @@ msgstr "Фамилия"
 msgid ""
 "Obligatory field. No more than 150 characters. Only letters, numbers and "
 "symbols  @/./+/-/_."
-msgstr ""
-"Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./"
-"+/-/_."
+msgstr "Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./+/-/_."
 
 #: task_manager/templates/users/create.html:30
 #: task_manager/templates/users/update.html:31
@@ -379,15 +344,15 @@ msgstr "Для подтверждения введите, пожалуйста, 
 
 #: task_manager/templates/users/create.html:38
 msgid "Registry"
-msgstr "Зарегистрировать"
+msgstr "Зарегистрироваться"
 
 #: task_manager/templates/users/delete.html:10
 msgid "Deleting a user"
-msgstr "Удалить"
+msgstr "Удаление пользователя"
 
 #: task_manager/templates/users/delete.html:12
 msgid "Are you sure you want to delete the user"
-msgstr "Вы уверены, что хотите удлалить пользователя?"
+msgstr "Вы уверены, что хотите удалить пользователя"
 
 #: task_manager/templates/users/update.html:14
 #: task_manager/templates/users/update.html:15
@@ -403,9 +368,7 @@ msgstr "Фамилия"
 msgid ""
 "Obligatory field. No more than 150 characters. Only letters, numbers and "
 "symbols @/./+/-/_."
-msgstr ""
-"Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./"
-"+/-/_."
+msgstr "Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./+/-/_."
 
 #: task_manager/templates/users/update.html:36
 #: task_manager/templates/users/update.html:37
@@ -414,7 +377,7 @@ msgstr "Подтверждение пароля"
 
 #: task_manager/templates/users/update.html:40
 msgid "Change"
-msgstr "Изменить"
+msgstr "Обновить"
 
 #: task_manager/templates/users/users.html:16
 msgid "Full name"
@@ -422,15 +385,15 @@ msgstr "Полное имя"
 
 #: task_manager/users/mixins.py:13
 msgid "You don't have permission to change other user"
-msgstr "У вас нет прав для изменения других пользователей"
+msgstr "У вас нет прав для изменения другого пользователя."
 
 #: task_manager/users/views.py:28
 msgid "Your profile has been successfully created!"
-msgstr "Пользователь был успещно создан!"
+msgstr "Пользователь успешно зарегистрирован"
 
 #: task_manager/users/views.py:32
 msgid "Please refill the form!"
-msgstr "Пожалуйста, заполните форму заного"
+msgstr "Пожалуйста, заполните поля заново"
 
 #: task_manager/users/views.py:45
 msgid "User successfully changed"
@@ -452,9 +415,7 @@ msgstr "Вы залогинены"
 msgid ""
 "Please enter the correct username and password. Both fields can be case "
 "sensitive."
-msgstr ""
-"Пожалуйста, введите правильные имя пользователя и пароль. Оба поля могут "
-"быть чувствительны к регистру."
+msgstr "Пожалуйста, введите правильные имя пользователя и пароль. Оба поля могут быть чувствительны к регистру."
 
 #: task_manager/views.py:35
 msgid "You are logged out"

@@ -8,7 +8,7 @@
         <div class="container wrapper flex-grow-1">
             {% include 'messages.html' %}
             <h1 class="my-4">{% translate 'Delete label' %}</h1>
-            <p>{% translate 'Are you sure you want to delete' %} {{ label.name }}?</p>
+            <p>{% translate 'Are you sure you want to delete' %} {{ object.name }}?</p>
             <form action="{% url 'delete_label' object.id %}" method="post">
                 {% csrf_token %}
                 <input class="btn btn-danger" type="submit" value="{% translate 'Yes, delete' %}">

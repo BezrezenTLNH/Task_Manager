@@ -9,7 +9,7 @@
             {% include 'messages.html' %}
             <h1 class="my-4">{% translate 'Deleting a task' %}</h1>
 
-            <p>{% translate 'Are you sure you want to delete the task' %} {{ object.username }}?</p>
+            <p>{% translate 'Are you sure you want to delete the task' %} {{ object.name }}?</p>
 
             <form action="{% url 'delete_task' object.id %}" method="post">
               {% csrf_token %}
