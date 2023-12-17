@@ -3,9 +3,11 @@ from django.views.generic import CreateView, UpdateView, DeleteView, ListView
 from .forms import CustomUserCreationForm, CustomUserUpdateForm
 from django.utils.translation import gettext as _
 from django.contrib.auth.models import User
+from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from task_manager.mixins import CustomLoginRequiredMixin
 from .mixins import CustomAccessMixin
+from task_manager.tasks.models import TaskModel
 
 
 # Create your views here.
@@ -52,5 +54,14 @@ class UserFormDeleteView(CustomLoginRequiredMixin,
     success_url = reverse_lazy('users')
 
     def form_valid(self, form):
+        user = self.object
+        task_autor = TaskModel.objects.filter(author_id=user.id)
+        task_executor = TaskModel.objects.filter(executor_id=user.id)
+        if task_autor or task_executor:
+            messages.warning(
+                self.request, _('Cannot delete user because it is in use')
+            )
+            return redirect('users')
+
         messages.success(self.request, _('User deleted successfully'))
         return super().form_valid(form)
