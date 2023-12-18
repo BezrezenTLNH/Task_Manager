@@ -344,7 +344,7 @@ msgstr "Для подтверждения введите, пожалуйста, 
 
 #: task_manager/templates/users/create.html:38
 msgid "Registry"
-msgstr "Зарегистрироваться"
+msgstr "Зарегистрировать"
 
 #: task_manager/templates/users/delete.html:10
 msgid "Deleting a user"
