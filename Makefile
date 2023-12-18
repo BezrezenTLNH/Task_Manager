@@ -17,7 +17,7 @@ tests:
 	poetry run python3 manage.py test task_manager.tests
 
 coverage:
-	poetry run coverage run --source='.' manage.py test task_manager.tests && poetry run coverage xml
+	poetry run coverage run --source='task_manager' manage.py test task_manager.tests && poetry run coverage xml
 
 lint:
 	poetry run flake8 task_manager
