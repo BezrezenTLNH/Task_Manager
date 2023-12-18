@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-18 17:07+0100\n"
+"POT-Creation-Date: 2023-12-18 17:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,10 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-
 #: labels/models.py:12 statuses/models.py:12
 msgid "Task status with such Name already exist."
-msgstr "Статус задачи с таким именем уже существует"
+msgstr ""
 
 #: labels/models.py:14 statuses/models.py:14 tasks/models.py:18
 #: templates/labels/labels.html:17 templates/labels/update.html:15
@@ -43,15 +42,12 @@ msgid "Label successfully changed"
 msgstr "Метка успешно изменена"
 
 #: labels/views.py:52
-#, fuzzy
 msgid "Cannot remove label because it is in use"
 msgstr "Невозможно удалить метку, потому что она используется"
 
 #: labels/views.py:56
-#, fuzzy
-#| msgid "Task deleted successfully!"
 msgid "Label deleted successfully!"
-msgstr "Задача успешно удалена!"
+msgstr "Задача успешно удалена"
 
 #: mixins.py:13 tasks/mixins.py:15
 msgid "You are not authorized! Please log in."
@@ -74,16 +70,12 @@ msgid "Status successfully changed"
 msgstr "Статус успешно изменен"
 
 #: statuses/views.py:53
-#, fuzzy
-#| msgid "Cannot delete user because it is in use"
 msgid "Cannot delete status because it is in use"
 msgstr "Невозможно удалить статус, потому что он используется"
 
 #: statuses/views.py:57
-#, fuzzy
-#| msgid "Task deleted successfully!"
 msgid "Status deleted successfully!"
-msgstr "Задача успешно удалена!"
+msgstr "Статус успешно удалён"
 
 #: tasks/filters.py:13 tasks/models.py:31 templates/tasks/tasks.html:26
 #: templates/tasks/view_task.html:28
@@ -151,11 +143,11 @@ msgstr "Задача была успешно создана"
 
 #: tasks/views.py:59
 msgid "Task successfully changed"
-msgstr "Задача успешно изменена"
+msgstr "Задача была успешно изменена"
 
 #: tasks/views.py:69
 msgid "Task deleted successfully!"
-msgstr "Задача успешно удалена!"
+msgstr "Задача успешно удалена"
 
 #: templates/header.html:23 templates/header.html:30
 msgid "Task manager"
@@ -318,9 +310,7 @@ msgstr "Фамилия"
 msgid ""
 "Obligatory field. No more than 150 characters. Only letters, numbers and "
 "symbols  @/./+/-/_."
-msgstr ""
-"Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./"
-"+/-/_."
+msgstr "Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./+/-/_."
 
 #: templates/users/create.html:30 templates/users/update.html:31
 msgid "Your password must contain at least 3 characters."
@@ -358,9 +348,7 @@ msgstr "Фамилия"
 msgid ""
 "Obligatory field. No more than 150 characters. Only letters, numbers and "
 "symbols @/./+/-/_."
-msgstr ""
-"Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./"
-"+/-/_."
+msgstr "Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./+/-/_."
 
 #: templates/users/update.html:36 templates/users/update.html:37
 msgid "Password confirmation"
@@ -402,9 +390,7 @@ msgstr "Вы залогинены"
 msgid ""
 "Please enter the correct username and password. Both fields can be case "
 "sensitive."
-msgstr ""
-"Пожалуйста, введите правильные имя пользователя и пароль. Оба поля могут "
-"быть чувствительны к регистру."
+msgstr "Пожалуйста, введите правильные имя пользователя и пароль. Оба поля могут быть чувствительны к регистру."
 
 #: views.py:35
 msgid "You are logged out"

@@ -51,7 +51,7 @@ class DeleteLabel(CustomLoginRequiredMixin, CheckDependencyMixin, DeleteView):
             messages.warning(
                 self.request, _('Cannot remove label because it is in use')
             )
-            return redirect('statuses')
+            return redirect('labels')
 
         messages.success(self.request, _('Label deleted successfully!'))
         return super().form_valid(form)
