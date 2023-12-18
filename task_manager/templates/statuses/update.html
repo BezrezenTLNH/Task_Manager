@@ -17,6 +17,11 @@
                 <input class="btn btn-primary" type="submit" value="{% translate 'Update' %}">
             </form>
         </div>
+{% if form.errors%}
+    {% for error in form.errors %}
+        <p>{{ error|escape }}</p>
+    {% endfor %}
+{% endif %}
     </body>
 
 {% include 'footer.html' %}
