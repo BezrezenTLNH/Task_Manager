@@ -47,7 +47,7 @@ msgstr "Невозможно удалить метку, потому что он
 
 #: labels/views.py:56
 msgid "Label deleted successfully!"
-msgstr "Задача успешно удалена"
+msgstr "Метка успешно удалена"
 
 #: mixins.py:13 tasks/mixins.py:15
 msgid "You are not authorized! Please log in."
