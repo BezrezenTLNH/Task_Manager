@@ -93,7 +93,7 @@ msgstr "Метка"
 
 #: tasks/filters.py:25
 msgid "Only my tasks"
-msgstr "Только мои задачи"
+msgstr "Только свои задачи"
 
 #: tasks/mixins.py:25
 msgid "Only its author can delete a task"
