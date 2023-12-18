@@ -46,7 +46,7 @@ msgstr "Метка успешно изменена"
 #, fuzzy
 #| msgid "Cannot delete user because it is in use"
 msgid "Cannot remove label because it is in use"
-msgstr "Невозможно удалить пользователя, потому что он используется"
+msgstr "Невозможно удалить метку, потому что она используется"
 
 #: labels/views.py:56
 #, fuzzy
@@ -78,7 +78,7 @@ msgstr "Статус успешно изменен"
 #, fuzzy
 #| msgid "Cannot delete user because it is in use"
 msgid "Cannot delete status because it is in use"
-msgstr "Невозможно удалить пользователя, потому что он используется"
+msgstr "Невозможно удалить статус, потому что он используется"
 
 #: statuses/views.py:57
 #, fuzzy
