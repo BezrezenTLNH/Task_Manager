@@ -37,7 +37,7 @@
         <input type="password" name="password2" autocomplete="new-password" class="form-control" placeholder="{% translate 'Password confirmation' %}" required="" id="id_password2">
         <div class="form-text">{% translate 'To confirm, please enter your password again.' %}</div>
     </div>
-    <input class="btn btn-primary" type="submit" value="{% translate 'Change' %}">
+    <input class="btn btn-primary" type="submit" value="{% translate 'Update' %}">
 </form>
     {% if form.errors%}
         {% for error in form.errors %}
