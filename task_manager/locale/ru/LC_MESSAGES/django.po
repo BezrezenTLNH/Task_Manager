@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-18 14:49+0100\n"
+"POT-Creation-Date: 2023-12-18 15:24+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -178,7 +178,8 @@ msgstr "Узнать больше"
 msgid "Create label"
 msgstr "Создать метку"
 
-#: templates/labels/create.html:15 templates/tasks/create.html:15
+#: templates/labels/create.html:15 templates/statuses/create.html:17
+#: templates/tasks/create.html:15
 msgid "Create"
 msgstr "Создать"
 
@@ -238,8 +239,7 @@ msgstr "Пароль"
 msgid "Log in"
 msgstr "Войти"
 
-#: templates/statuses/create.html:10 templates/statuses/create.html:17
-#: templates/statuses/statuses.html:11
+#: templates/statuses/create.html:10 templates/statuses/statuses.html:11
 msgid "Create status"
 msgstr "Создать статус"
 
@@ -386,4 +386,3 @@ msgstr ""
 #: views.py:35
 msgid "You are logged out"
 msgstr "Вы разлогинены"
-
