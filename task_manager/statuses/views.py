@@ -42,6 +42,6 @@ class DeleteStatus(CustomLoginRequiredMixin, DeleteView):
     model = StatusModel
     template_name = 'statuses/delete.html'
     success_url = reverse_lazy('statuses')
-    msg_success = 'Status deleted successfully!'
-    msg_error = 'Cannot delete status because it is in use'
+    success_message = _('Status deleted successfully!')
+    warning_message = _('Cannot delete status because it is in use')
     url_redirect = 'statuses'

@@ -41,6 +41,6 @@ class DeleteLabel(CustomLoginRequiredMixin, CheckDependencyMixin, DeleteView):
     model = LabelModel
     template_name = 'labels/delete.html'
     success_url = reverse_lazy('labels')
-    msg_success = 'Label deleted successfully!'
-    msg_error = 'Cannot remove label because it is in use'
+    success_message = _('Label deleted successfully!')
+    warning_message = _('Cannot remove label because it is in use')
     url_redirect = 'labels'
