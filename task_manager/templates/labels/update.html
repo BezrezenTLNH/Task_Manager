@@ -13,7 +13,7 @@
                 {% csrf_token %}
                 <div class="mb-3">
                     <label class="form-label" for="id_name">{% translate 'Name' %}</label>
-                    <input type="text" name="name" maxlength="50" class="form-control" placeholder="{% translate 'Name' %}" required="" id="id_name" value="{{ label.name }}">
+                    <input type="text" name="name" maxlength="50" class="form-control" placeholder="{% translate 'Name' %}" required="" id="id_name" value="{{ object.name }}">
                 </div>
                 <input class="btn btn-primary" type="submit" value="{% translate 'Update' %}">
             </form>
