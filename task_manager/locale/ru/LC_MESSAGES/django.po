@@ -75,7 +75,7 @@ msgstr "Невозможно удалить статус, потому что о
 
 #: statuses/views.py:57
 msgid "Status deleted successfully!"
-msgstr "Статус успешно удалён"
+msgstr "Статус успешно удален"
 
 #: tasks/filters.py:13 tasks/models.py:31 templates/tasks/tasks.html:26
 #: templates/tasks/view_task.html:28
