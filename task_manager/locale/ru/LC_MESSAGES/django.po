@@ -139,11 +139,11 @@ msgstr "Выбери одну или более меток"
 
 #: tasks/views.py:48
 msgid "Task has been successfully created"
-msgstr "Задача была успешно создана"
+msgstr "Задача успешно создана"
 
 #: tasks/views.py:59
 msgid "Task successfully changed"
-msgstr "Задача была успешно изменена"
+msgstr "Задача успешно изменена"
 
 #: tasks/views.py:69
 msgid "Task deleted successfully!"
