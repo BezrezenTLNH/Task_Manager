@@ -369,7 +369,7 @@ msgstr "Невозможно удалить пользователя, потом
 
 #: users/views.py:65
 msgid "User deleted successfully"
-msgstr "Пользователь успешно удалён"
+msgstr "Пользователь успешно удален"
 
 #: views.py:18
 msgid "You are logged in"
