@@ -115,6 +115,7 @@ DATABASES = {
     )
 }
 
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -137,9 +138,9 @@ LANGUAGES = [
 
 LANGUAGE_CODE = 'ru-ru'
 
-# LOCALE_PATHS = [
-#     BASE_DIR / 'task_manager' / 'locale',
-# ]
+LOCALE_PATHS = [
+    BASE_DIR / 'task_manager' / 'locale',
+]
 
 # TIME_ZONE = 'UTC'
 
