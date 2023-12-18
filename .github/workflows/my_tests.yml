@@ -1,4 +1,4 @@
-name: linter-and-test
+name: Python CI
 
 on:
   push:

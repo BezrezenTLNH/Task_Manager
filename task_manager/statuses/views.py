@@ -1,10 +1,12 @@
 from django.contrib import messages
+from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
 from django.views.generic import CreateView, UpdateView, DeleteView, ListView
 
 from .models import StatusModel
 from .forms import StatusModelForm
+from task_manager.tasks.models import TaskModel
 from task_manager.mixins import CustomLoginRequiredMixin
 
 
@@ -42,6 +44,15 @@ class DeleteStatus(CustomLoginRequiredMixin, DeleteView):
     model = StatusModel
     template_name = 'statuses/delete.html'
     success_url = reverse_lazy('statuses')
-    success_message = _('Status deleted successfully!')
-    warning_message = _('Cannot delete status because it is in use')
-    url_redirect = 'statuses'
+
+    def form_valid(self, form):
+        status = self.object
+        task_status = TaskModel.objects.filter(status_id=status.id)
+        if task_status:
+            messages.warning(
+                self.request, _('Cannot delete status because it is in use')
+            )
+            return redirect('statuses')
+
+        messages.success(self.request, _('Status deleted successfully!'))
+        return super().form_valid(form)
