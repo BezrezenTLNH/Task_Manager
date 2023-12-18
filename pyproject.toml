@@ -21,6 +21,7 @@ django-modeltranslation = "^0.18.11"
 psycopg2-binary = "^2.9.9"
 django-filter = "^23.5"
 rollbar = "^1.0.0"
+coverage = "^7.3.3"
 
 
 [tool.poetry.group.dev.dependencies]
