@@ -60,7 +60,7 @@ msgstr "Статус успешно создан"
 
 #: statuses/views.py:35
 msgid "Status successfully changed"
-msgstr "Статус успешно изменён"
+msgstr "Статус успешно изменен"
 
 #: tasks/filters.py:13 tasks/models.py:31 templates/tasks/tasks.html:26
 #: templates/tasks/view_task.html:28
@@ -361,7 +361,7 @@ msgstr "Пожалуйста, заполните поля заново"
 
 #: users/views.py:45
 msgid "User successfully changed"
-msgstr "Пользователь успешно изменён"
+msgstr "Пользователь успешно изменен"
 
 #: users/views.py:61
 msgid "Cannot delete user because it is in use"
