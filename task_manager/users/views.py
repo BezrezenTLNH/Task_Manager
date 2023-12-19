@@ -11,7 +11,6 @@ from .forms import CustomUserCreationForm, CustomUserUpdateForm
 from .mixins import CustomAccessMixin
 
 
-# Create your views here.
 class UsersView(ListView):
     template_name = 'users/users.html'
     model = User
