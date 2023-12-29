@@ -19,7 +19,7 @@ With its help, you can assign tasks to employees and monitor their implementatio
 ### Installation
 **Setting up enviroment**
 ```
-git clone git@github.com:BezrezenTLNH/python-project-52.git
+git clone git@github.com:BezrezenTLNH/Task_Manager.git
 cd task-manager
 make build
 ```
